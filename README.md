@@ -44,5 +44,4 @@ When your theme is released, only the files in `_layouts`, `_includes`, and `_sa
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
+The theme is available as open source under the terms of the [GPL-3.0 License](https://www.gnu.org/licenses/gpl-3.0.en.html).

@@ -1,0 +1,68 @@
+// Custom SCSS
+
+// General
+html {
+  height: 100%
+}
+body {
+  background: linear-gradient($gray-base, $gray-darker);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+a {
+  cursor: pointer;
+}
+
+// Footer
+// Social media hover colors colors
+$icon-shadow: 15px;
+$icons-list: github facebook twitter google-plus linkedin envelope;
+$icons-colors: $github-color $facebook-color $twitter-color $google-plus-color
+               $linkedin-color $envelope-color;
+@for $i from 1 through length($icons-list) {
+  .fa-#{nth($icons-list, $i)}:hover {
+    text-shadow: 0 0 $icon-shadow #{nth($icons-colors, $i)};
+  }
+}
+// Spacing
+footer {
+  margin-top: 10em;
+  center div div a i {
+    color: $gray !important;
+  }
+}
+
+// Header
+// Header Title
+.header-title {
+  color: $brand-primary;
+}
+//Spacing
+header {
+  margin-top: 1em;
+  margin-bottom: 20em;
+}
+.navbar-toggle:hover {
+  background-color: transparent !important;
+}
+.navbar-icon:hover {
+  text-shadow: 0 0 $icon-shadow lighten($brand-primary, 20%);
+  color: $brand-primary !important;
+}
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.25s ease-in-out;
+  -webkit-transition: background-color 0.25s ease-in-out;
+}
+nav:hover  {
+  background-color: $navbar-default-bg;
+}
+
+// Post
+.post-title {
+  color: $brand-primary;
+}
+.blog-post {
+  margin-bottom: 10em;
+}

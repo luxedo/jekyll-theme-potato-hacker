@@ -1,13 +1,13 @@
 # coding: utf-8
 
 Gem::Specification.new do |spec|
-  spec.name          = "potato-hacker"
-  spec.version       = "0.1.0"
+  spec.name          = "potato-hacker-jekyll-template"
+  spec.version       = "0.2.0"
   spec.authors       = ["Luiz Eduardo Amaral"]
   spec.email         = ["luizamaral306@gmail.com"]
 
   spec.summary       = %q{A theme based on hackers and potatoes}
-  spec.homepage      = "https://github.com/ArmlessJohn404/potato-hacker"
+  spec.homepage      = "https://github.com/ArmlessJohn404/potato-hacker-jekyll-template"
   spec.license       = "GPL-3.0"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_sass|LICENSE|README)}i) }

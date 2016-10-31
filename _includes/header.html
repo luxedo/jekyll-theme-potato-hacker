@@ -1,0 +1,53 @@
+<header>
+  <div class="row">
+    <div class="col-xs-12">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-toggle collapsed navbar-icon" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1">
+              <i class="fa fa-bars fa-2x"></i>
+            </a>
+            <a class="navbar-brand navbar-icon" href="/">
+              <i class="fa fa-rocket fa-2x"></i>
+            </a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/blog">Blog</a></li>
+
+              {% for page in site.projects %}
+                <li class="dropdown dropdown-{{page.dropdown}}">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                    role="button" aria-haspopup="true" aria-expanded="false">{{page.dropdown}}
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-{{page.title}}">
+                    <li><a href="{{page.url}}">{{page.title}}</a></li>
+                  </ul>
+                </li>
+              {% endfor %}
+              <script>
+                // clean repeated dropdowns and add <li> to their positions
+                $(".dropdown").each((index0, value0) => {
+                  let dropdownClass = "."+$(value0)[0].classList[1];
+                  let dropdownMain = $(dropdownClass)[0].querySelector("ul");
+                  if ($(dropdownClass).length > 1) {
+                    $(dropdownClass).each((index1, value1) => {
+                      if (index1 != 0) {
+                        dropdownMain.append(value1.querySelector("ul li"))
+                        $(dropdownClass)[1].remove();
+                      }
+                    });
+                  }
+                });
+              </script>
+              <li><a href="/about">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>

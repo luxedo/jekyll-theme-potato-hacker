@@ -1,1 +1,24 @@
-{{ content }}
+---
+---
+<!DOCTYPE html>
+<html lang="pt-br">
+  {% include head.html %}
+  <body>
+    <div class="background-text"></div>
+    <div class="container">
+      <section class="content">
+        {% include header.html %}
+      <section>
+      <section class="content">
+        <div class="row">
+          <div class="col-sm-{{site.columns}} col-sm-offset-{{site.offset}} content-div">
+            {{ content }}
+          </div>
+        </div>
+      </section>
+      <section class="footer">
+      {% include footer.html %}
+      </section>
+    </div>
+  </body>
+</html>

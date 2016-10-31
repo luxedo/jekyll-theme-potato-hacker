@@ -1,6 +1,6 @@
 ---
 layout: default
-title: armlessJohn404
+title: myIndexTitle
 description: Test page
 ---
 # Lorem ipsum

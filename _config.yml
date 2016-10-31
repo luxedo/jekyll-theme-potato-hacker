@@ -24,11 +24,17 @@ facebook_username: "<facebook_username>"
 twitter_username: "<twitter_username>"
 gplus_id: "<google_plus_id>"
 linkedin_id: "<linkedin_id>"
+
+# theme repository
+theme_repository: "https://github.com/ArmlessJohn404/potato-hacker-jekyll-template"
+
+# extra settings
 collections:
   projects:
     output: true
 columns: 8
 offset: 2
+
 # Build settings
 markdown: kramdown
 exclude:

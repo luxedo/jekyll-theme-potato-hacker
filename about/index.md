@@ -1,6 +1,6 @@
 ---
 layout: page
-title: armlessJohn404
+title: myTitle
 description: Test page
 ---
 # Lorem ipsum

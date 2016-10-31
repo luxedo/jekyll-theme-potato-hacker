@@ -2,7 +2,7 @@
 
 Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes` and your sass in `_sass`. To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
 
-TODO: Delete this and the text above, and describe your gem
+![screenshot](screenshot.png "screenshot")
 
 ## Installation
 
@@ -29,6 +29,21 @@ Or install it yourself as:
 ## Usage
 
 This is a simple theme I made to my portfolio/blog https://armlessjohn404.github.io/
+There are four different categories of pages for this template:
+* Main page `index.md` in the root.
+* About page `about/index.md`
+* Blog posts `_posts` folder.
+* Dropdown menu projects `_projects` folder.
+
+The dropdown menus are generated based on the YAML data in the files. Use the `dropdown` attribute to chose where the page will be placed.
+```yaml
+---
+layout: page
+title: dropdown1 item1
+description: Test page
+dropdown: dropdown1
+---
+```
 
 ## Contributing
 

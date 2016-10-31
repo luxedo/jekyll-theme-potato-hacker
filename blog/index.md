@@ -1,6 +1,6 @@
 ---
 layout: default
-title: armlessJohn404
+title: myBlogTitle
 description: Test page
 ---
 {% for item in site.posts %}

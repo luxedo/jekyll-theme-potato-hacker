@@ -24,7 +24,7 @@
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-{{page.title}}">
-                    <li><a href="{{page.url}}" onclick="animateOut(this);">{{page.title}}</a></li>
+                    <li><a href="{% if page.redirect_to %}{{page.redirect_to}}{% else %}{{page.url}}{% endif %}" onclick="animateOut(this);">{{page.title}}</a></li>
                   </ul>
                 </li>
               {% endfor %}

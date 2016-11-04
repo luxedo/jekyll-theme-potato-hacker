@@ -1,18 +1,28 @@
 ---
 ---
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
   {% include head.html %}
-  <body>
-    <div class="background-text"></div>
+  <body class="animated fadeIn">
     <div class="container">
-      <section class="content">
+      <div id="background-div"><svg id="background-svg">
+          <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+              <stop stop-opacity="0" class="bgColor2" offset="0%"/>
+            <stop stop-opacity="0.5" class="bgColor1" offset="50%"/>
+            <stop stop-opacity="0" class="bgColor1" offset="100%"/>
+          </linearGradient>
+          <g id="bg-layer1"><g>
+          <g id="bg-layer2"><g>
+          <g id="bg-layer3"><g>
+          <g id="bg-layer4"><g>
+      </svg></div>
+      <section class="header">
         {% include header.html %}
-      <section>
+      </section>
       <section class="content">
         <div class="row">
           <div class="col-sm-{{site.columns}} col-sm-offset-{{site.offset}} content-div">
-            <h1 class="post-title"> {{ page.title }}</h1>
+            <h1 class="post-title page-title" id="title"><a  href="#title">{{ page.title }}</a></h1>
             {{ content }}
           </div>
         </div>
@@ -20,6 +30,10 @@
       <section class="footer">
       {% include footer.html %}
       </section>
+      <!--  hidden elements to get the CSS colors-->
+      <span class='bgColor1'></span>
+      <span class='bgColor2'></span>
+      <span class='bgColor3'></span>
     </div>
   </body>
 </html>

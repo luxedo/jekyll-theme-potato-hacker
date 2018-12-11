@@ -8,14 +8,14 @@
               data-target="#bs-example-navbar-collapse-1">
               <i class="fa fa-bars fa-2x"></i>
             </a>
-            <a class="navbar-brand navbar-icon animateOut" href="/" onclick="animateOut(this);">
-              <i class="fa fa-rocket fa-2x"></i>
+            <a class="navbar-brand navbar-icon" href="/">
+                <i class="fa fa-home fa-2x"></i>
             </a>
           </div>
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="/blog" onclick="animateOut(this);">Blog</a></li>
+              <li><a href="/blog">Blog</a></li>
 
               {% for page in site.projects %}
                 <li class="dropdown dropdown-{{page.dropdown}}">
@@ -24,7 +24,7 @@
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-{{page.title}}">
-                    <li><a href="{% if page.redirect_to %}{{page.redirect_to}}{% else %}{{page.url}}{% endif %}" onclick="animateOut(this);">{{page.title}}</a></li>
+                    <li><a href="{% if page.redirect_to %}{{page.redirect_to}}{% else %}{{page.url}}{% endif %}">{{page.title}}</a></li>
                   </ul>
                 </li>
               {% endfor %}
@@ -42,17 +42,8 @@
                     });
                   }
                 });
-                // fade out animation on click
-                function animateOut(element) {
-                  $("body").removeClass().addClass("animated fadeOut");
-                  setTimeout(() => {
-                    $("body").hide();
-                    window.location = $(element).attr("href")
-                }, 500);
-                }
-                $('a').click(event => event.preventDefault());
               </script>
-              <li><a href="/about" onclick="animateOut(this);">About</a></li>
+              <li><a href="/about">About</a></li>
             </ul>
           </div>
         </div>

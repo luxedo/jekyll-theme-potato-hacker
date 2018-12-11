@@ -1,6 +1,6 @@
 ---
 layout: page
-title: dropdown2 item2
+title: item2
 description: Test page
 dropdown: dropdown2
 ---

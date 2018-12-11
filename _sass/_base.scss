@@ -1,86 +1,137 @@
 // Custom SCSS
-
 // General
+
 body {
-  background: linear-gradient($gray-base, $gray-darker);
+  background: linear-gradient($body-bg-header 10%, $body-bg 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  text-shadow: 0 0 0.01em $shadow-color;
 }
+
 a {
   cursor: pointer;
 }
 
+blockquote {
+  border-color: $gray;
+  border-width: 0 0 0 0.2em;
+  border-style: solid;
+}
+
 h1 {
   color: $brand-danger;
-  background-color: rgba($gray-base, 0.2);
+  background-color: $h1-bg;
   margin: 1em -100% 0;
   padding: 1em 100% 0.5em;
 }
-h2, h3, h4, h5, h6 {
-  color: $brand-danger;
-}
-.bgColor1 { stop-color: $brand-primary; }
-.bgColor2 { stop-color: $brand-danger; }
 
-#background-div, #background-svg {
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $brand-danger;
+  text-decoration-color: $brand-danger;
+  border-bottom-color: $brand-danger;
+}
+
+
+h1 a,
+h1 a:hover {
+  color: $brand-primary;
+}
+
+.bgColor1 {
+  stop-color: $bg-color1;
+}
+
+.bgColor2 {
+  stop-color: $bg-color2;
+}
+
+#background-div,
+#background-svg {
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 0;
 }
-
 // Footer
 // Social media hover colors colors
-$icon-shadow: 15px;
-$icons-list: github facebook twitter google-plus linkedin envelope;
-$icons-colors: $github-color $facebook-color $twitter-color $google-plus-color
-               $linkedin-color $envelope-color;
+$icon-shadow: 0.1em;
+$icons-list: github facebook twitter linkedin envelope;
+$icons-colors: $github-color $facebook-color $twitter-color $linkedin-color $envelope-color;
 @for $i from 1 through length($icons-list) {
   .fa-#{nth($icons-list, $i)}:hover {
     text-shadow: 0 0 $icon-shadow #{nth($icons-colors, $i)};
   }
 }
 // Spacing
-footer {
+
+.page-footer {
   margin-top: 10em;
+
   center div div a i {
     color: $gray !important;
   }
 }
 
-// Header
-//Spacing
-header {
-}
 .navbar-toggle:hover {
   background-color: transparent !important;
 }
+
 .navbar-icon:hover {
   text-shadow: 0 0 $icon-shadow lighten($brand-primary, 20%);
   color: $brand-primary !important;
 }
+
 .navbar {
-  background-color: rgba($gray-base, 0.5);
+  background-color: $navbar-bg;
   transition: background-color 0.25s ease-in-out;
   -webkit-transition: background-color 0.25s ease-in-out;
 }
-nav:hover  {
+
+nav:hover {
   background-color: $navbar-default-bg;
 }
-
 // Post
+
 .post-title {
   color: $brand-primary;
 }
+
 .blog-post {
   margin-bottom: 5em;
 }
-
 // Page
+
 .page-title {
-    padding-top: 8em;
+  padding-top: 8em;
+  z-index: 10;
+}
+// Code block text
+.highlight,
+.highlight .w {
+  // color: $text-color !important;
+  // background-color: rgba(currentColor, 0.5) !important;
+  opacity: 0.9;
+}
+$avatar-size: 10em;
+
+.avatar-image {
+  height: $avatar-size;
+  width: $avatar-size;
+  border-radius: $avatar-size;
+  border-style: solid;
+  border-width: medium;
+  border-color: $gray-light;
+}
+
+.avatar-description {
+  color: $gray-light;
 }

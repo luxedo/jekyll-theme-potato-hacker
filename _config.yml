@@ -22,21 +22,33 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: "<github_username>"
 facebook_username: "<facebook_username>"
 twitter_username: "<twitter_username>"
-gplus_id: "<google_plus_id>"
+# gplus_id: "<google_plus_id>"
 linkedin_id: "<linkedin_id>"
 
 # theme repository
 theme_repository: "https://github.com/ArmlessJohn404/potato-hacker-jekyll-template"
+theme_base: "light"        # Theme pallente (light | dark)
+theme_switch: on         # Show color switch (on | off)
 
 # extra settings
 collections:
   projects:
     output: true
-columns: 8
-offset: 2
+  about:
+    output: true
+  blog:
+    output: true
+columns: 8   # columns and offset must be integers and columns+2*offset must add to 12
+offset: 2    # columns and offset must be integers and columns+2*offset must add to 12
+avatar_image: "assets/img/avatar.jpg"
+avatar_description: "My name is Popotato and I'm a HACKER."
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 exclude:
   - Gemfile
   - Gemfile.lock

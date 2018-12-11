@@ -31,11 +31,11 @@ Or install it yourself as:
 This is a simple theme I made to my portfolio/blog https://armlessjohn404.github.io/
 There are four different categories of pages for this template:
 * Main page `index.md` in the root.
-* About page `about/index.md`
+* About page `_about/index.md`
 * Blog posts `_posts` folder.
 * Dropdown menu projects `_projects` folder.
 
-The dropdown menus are generated based on the YAML data in the files. Use the `dropdown` attribute to chose where the page will be placed.
+The dropdown menus are generated based on the [front matter](https://jekyllrb.com/docs/front-matter/) data in the files. Use the `dropdown` attribute to chose where the page will be placed.
 ```yaml
 ---
 layout: page

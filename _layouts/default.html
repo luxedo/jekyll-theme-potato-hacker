@@ -2,38 +2,72 @@
 ---
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
-  <body class="animated fadeIn">
-    <div class="container">
-      <div id="background-div"><svg id="background-svg">
-          <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
-              <stop stop-opacity="0" class="bgColor2" offset="0%"/>
-            <stop stop-opacity="0.5" class="bgColor1" offset="50%"/>
-            <stop stop-opacity="0" class="bgColor1" offset="100%"/>
-          </linearGradient>
-          <g id="bg-layer1"><g>
-          <g id="bg-layer2"><g>
-          <g id="bg-layer3"><g>
-          <g id="bg-layer4"><g>
-      </svg></div>
-      <section class="header">
-        {% include header.html %}
-      </section>
-      <section class="content">
-        <div class="row">
-          <div class="col-sm-{{site.columns}} col-sm-offset-{{site.offset}} content-div">
-            <h1 class="post-title page-title" id="title"><a  href="#title">{{ page.title }}</a></h1>
-            {{ content }}
+{% include head.html %}
+
+<body class="animated fadeIn">
+  <div class="container">
+    <div id="background-div">
+      <svg id="background-svg">
+        <lineargradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+          <stop stop-opacity="0" class="bgColor2" offset="0%" />
+          <stop stop-opacity="0.5" class="bgColor2" offset="10%" />
+          <stop stop-opacity="0.5" class="bgColor1" offset="40%" />
+          <stop stop-opacity="0" class="bgColor1" offset="100%" />
+        </lineargradient>
+        <g id="bg-layer1"></g>
+        <g id="bg-layer2" class="hide"></g>
+        <g id="bg-layer3"></g>
+        <g id="bg-layer4"></g>
+      </svg>
+    </div>
+    <section class="header">
+      {% include header.html %}
+    </section>
+    <section class="content">
+      <div class="row">
+        <!-- <div class="col-sm-2">
+          <div class="pane-separator hidden-xs" style="margin-bottom:30em;"></div>
+          <div class="left-pane">
+          </div>
+        </div> -->
+        <div class="col-sm-8 col-sm-offset-2 content-div">
+          <div class="page-separator hidden-xs"><h1 class="h1-strip" style="padding-bottom:8em; margin-bottom: 0;"></h1></div>
+          <div class="page-separator visible-xs"><h1 class="h1-strip" style="padding-bottom:2em; margin-bottom: 0;"></h1></div>
+          <h1 class="post-title page-title" id="title"><a href="#title">{{ page.title }}</a></h1>
+          {{ content }}
+        </div>
+        <div class="col-sm-2">
+          <div class="pane-separator hidden-xs" style="margin-bottom:30em;"></div>
+          <div class="pane-separator visible-xs" style="margin-bottom:5em;"></div>
+          <div class="right-pane" style="margin-left: 1em;">
+            {% if page.url contains '/blog/' or page.url == '/' %}
+              <center>
+                {% if site.avatar_image != null %}
+                  <img src="{{ site.avatar_image | prepend: '/' | prepend: site.baseurl }}" alt="me" class="avatar-image">
+                {% endif %}
+                <p class="avatar-description">{{site.avatar_description}}</p>
+              </center>
+            {% endif %}
+            {% if page.url contains "/blog/" %}
+              <a href="{{ '/blog' | prepend: site.baseurl }}">
+                <h4>Posts:</h4>
+              </a>
+            <ul>
+              {% for post in site.posts %}
+              <li>
+                <a href="{{ post.url | prepend: site.baseurl  }}">{{ post.title }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
           </div>
         </div>
-      </section>
-      <section class="footer">
+      </div>
+    </section>
+    <section class="footer">
       {% include footer.html %}
-      </section>
-      <!--  hidden elements to get the CSS colors-->
-      <span class='bgColor1'></span>
-      <span class='bgColor2'></span>
-      <span class='bgColor3'></span>
-    </div>
-  </body>
+    </section>
+  </div>
+</body>
+
 </html>

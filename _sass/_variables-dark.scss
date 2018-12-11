@@ -9,11 +9,12 @@
 
 $gray-base:              #000;
 $gray-darker:            lighten($gray-base, 13.5%); // #222
-$gray-darker-hover: 	 darken($gray-darker, 5%);
+$gray-darker-hover: 	   darken($gray-darker, 5%);
 $gray-dark:              lighten($gray-base, 20%);   // #333
 $gray:                   lighten($gray-base, 33.5%); // #555
 $gray-light:             lighten($gray-base, 46.7%); // #777
-$gray-lighter:           lighten($gray-base, 93.5%); // #eee
+$gray-lighter:           lighten($gray-base, 82.5%);
+$gray-white:             lighten($gray-base, 100%); // #fff
 
 $brand-primary:         #1F7F1F;
 $brand-success:         #3F7F3F;
@@ -22,10 +23,10 @@ $brand-warning:         #7F6F3F;
 $brand-danger:          #7F3F3F;
 
 // Icons colors
-$github-color:          #000;
+$github-color:          #666;
 $facebook-color:        #3b5998;
 $twitter-color:         #326ada;
-$google-plus-color:     #d34836;
+// $google-plus-color:     #d34836;
 $linkedin-color:        #0077b5;
 $envelope-color:        #c71610;
 
@@ -34,14 +35,20 @@ $envelope-color:        #c71610;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               $gray-darker;
+$body-bg-header:        $gray-base;
+$body-bg:               darken(desaturate($brand-primary, 50%), 15%);
+
 //** Global text color on `<body>`.
-$text-color:            $gray-light;
+$text-color:            $gray-lighter;
+$shadow-color:          currentColor;
+$h1-bg:                 rgba($body-bg-header, 0.2);
+$bg-color1:             $brand-primary;
+$bg-color2:             $brand-danger;
 
 //** Global textual link color.
-$link-color:            $brand-primary;
+$link-color:            lighten($brand-primary, 15%);
 //** Link hover color set via `darken()` function.
-$link-hover-color:      darken($link-color, 15%);
+$link-hover-color:      $link-color;
 //** Link hover decoration.
 $link-hover-decoration: underline;
 
@@ -56,7 +63,7 @@ $font-family-serif:       Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:   "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:        $font-family-monospace;
 
-$font-size-base:          14px;
+$font-size-base:          15px;
 $font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)); // ~12px
 
@@ -137,7 +144,7 @@ $table-condensed-cell-padding:  5px;
 //** Default background color used for all tables.
 $table-bg:                      transparent;
 //** Background color used for `.table-striped`.
-$table-bg-accent:               $gray;
+$table-bg-accent:               $gray-dark;
 //** Background color used for `.table-hover`.
 $table-bg-hover:                $gray-darker-hover;
 $table-bg-active:               $table-bg-hover;
@@ -364,6 +371,7 @@ $navbar-collapse-max-height:       340px;
 
 $navbar-default-color:             $gray-light;
 $navbar-default-bg:                $gray-base;
+$navbar-bg:                        rgba($body-bg-header, 0.7);
 $navbar-default-border:            transparent;
 
 // Navbar links
@@ -826,14 +834,14 @@ $close-text-shadow:           0 1px 0 #fff;
 //
 //##
 
-$code-color:                  #c7254e;
-$code-bg:                     #f9f2f4;
+$code-color:                  lighten($brand-danger, 25%);
+$code-bg:                     rgba($text-color, 0.1);
 
 $kbd-color:                   #fff;
 $kbd-bg:                      #333;
 
-$pre-bg:                      #f5f5f5;
-$pre-color:                   $gray-dark;
+$pre-bg:                      #f5f5f5;      // Useless, Overwritten in _base.scss
+$pre-color:                   $gray-dark;   // Useless, Overwritten in _base.scss
 $pre-border-color:            #ccc;
 $pre-scrollable-max-height:   340px;
 

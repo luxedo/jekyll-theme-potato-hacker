@@ -17,26 +17,36 @@ title: potato-hacker-jekyll-template
 author: "<your_name>"
 email: "<your@mail>"
 description: A simple Jekyll theme based on potatoes and hackers
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/potato-hacker-jekyll-template" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: "<github_username>"
 facebook_username: "<facebook_username>"
 twitter_username: "<twitter_username>"
-gplus_id: "<google_plus_id>"
+# gplus_id: "<google_plus_id>"
 linkedin_id: "<linkedin_id>"
 
 # theme repository
 theme_repository: "https://github.com/ArmlessJohn404/potato-hacker-jekyll-template"
+theme_base: "dark"        # Theme pallente (light | dark)
+theme_switch: on         # Show color switch (on | off)
 
 # extra settings
 collections:
-  projects:
+  dropdown:
     output: true
-columns: 8
-offset: 2
+  items:
+    output: true
+  blog:
+    output: true
+avatar_image: "assets/img/avatar.jpg"
+avatar_description: "My name is Popotato and I'm a HACKER."
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 exclude:
   - Gemfile
   - Gemfile.lock

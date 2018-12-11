@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "potato-hacker-jekyll-template"
-  spec.version       = "0.2.2"
+  spec.version       = "0.3.0"
   spec.authors       = ["Luiz Eduardo Amaral"]
   spec.email         = ["luizamaral306@gmail.com"]
 

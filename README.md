@@ -47,6 +47,15 @@ dropdown: dropdown1
 ---
 ```
 
+If you want to use the blog, you need to set `blog: on` inside `_config.yml` and add a `blog.md` file in your root directory:
+```yaml
+---
+layout: blog-index
+title: My Blog
+description: Test page
+---
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/luxedo/jekyll-theme-potato-hacker/issues. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.

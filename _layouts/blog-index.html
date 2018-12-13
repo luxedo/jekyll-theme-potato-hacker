@@ -1,17 +1,15 @@
 ---
 layout: page
-title: myBlogTitle
-description: Test page
 ---
 {% for post in site.posts %}
     <a href="{{ post.url | prepend: site.baseurl }}">
       <h1 class="post-title"> {{ post.title }}</h1>
       <h4 class="post-title"> {{ post.date }} </h4>
     </a>
-    {{ post.content | split:'<!--break-->' | first }}
-   {% if post.content contains '<!--break-->' %}
-      <a href="{{ post.url | prepend: site.baseurl }}">continue reading -&gt;</a>
-   {% endif %}
+    {{post.excerpt}}
+    {% if post.content contains site.excerpt_separator %}
+      <b><a href="{{ post.url | prepend: site.baseurl }}">continue reading -&gt;</a></b>
+    {% endif %}
     <br/>
     <div style="margin-bottom: 5em;"></div>
 {% endfor %}

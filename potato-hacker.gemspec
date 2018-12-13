@@ -2,23 +2,13 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-potato-hacker"
-  spec.version       = "1.0.0"
+  spec.version       = "1.0.1"
   spec.authors       = ["Luiz Eduardo Amaral"]
   spec.email         = ["luizamaral306@gmail.com"]
 
-  spec.summary       = %q{A theme based on hackers and potatoes.
-The 'potato-hacker-jekyll-template' gem has been deprecated and has been replaced by 'jekyll-theme-potato-hacker'.
-See: https://rubygems.org/gems/jekyll-theme-potato-hacker
-And: https://github.com/luxedo/jekyll-theme-potato-hacker
-}
+  spec.summary       = %q{A theme based on hackers and potatoes.}
   spec.homepage      = "https://github.com/luxedo/jekyll-theme-potato-hacker"
   spec.license       = "GPL-3.0"
-
-  spec.post_install_message = <<-MESSAGE
-!    The 'potato-hacker-jekyll-template' gem has been deprecated and has been replaced by 'jekyll-theme-potato-hacker'.
-!    See: https://rubygems.org/gems/jekyll-theme-potato-hacker
-!    And: https://github.com/luxedo/jekyll-theme-potato-hacker
-MESSAGE
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_sass|LICENSE|README)}i) }
 

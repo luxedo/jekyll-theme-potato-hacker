@@ -77,7 +77,6 @@ function setTheme(themeBase) {
   let href = document.getElementById("css-theme").getAttribute("href").replace(oldTheme, themeBase);
   let css = document.getElementById("css-theme");
   css.setAttribute("href", href);
-  if (css.getAttribute("media") != "all") css.setAttribute("media", "all");
 }
 
 // https://medium.com/talk-like/detecting-if-an-element-is-in-the-viewport-jquery-a6a4405a3ea2

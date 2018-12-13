@@ -1,6 +1,6 @@
 ---
 layout: default
-title: myIndexTitle
+title: Potato Hacker
 description: Test page
 ---
 # Lorem ipsum

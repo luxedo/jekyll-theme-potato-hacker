@@ -1,8 +1,8 @@
 # coding: utf-8
 
 Gem::Specification.new do |spec|
-  spec.name          = "potato-hacker-jekyll-template"
-  spec.version       = "0.3.2"
+  spec.name          = "jekyll-theme-potato-hacker"
+  spec.version       = "1.0.0"
   spec.authors       = ["Luiz Eduardo Amaral"]
   spec.email         = ["luizamaral306@gmail.com"]
 
@@ -11,7 +11,7 @@ The 'potato-hacker-jekyll-template' gem has been deprecated and has been replace
 See: https://rubygems.org/gems/jekyll-theme-potato-hacker
 And: https://github.com/luxedo/jekyll-theme-potato-hacker
 }
-  spec.homepage      = "https://github.com/luxedo/potato-hacker-jekyll-template"
+  spec.homepage      = "https://github.com/luxedo/jekyll-theme-potato-hacker"
   spec.license       = "GPL-3.0"
 
   spec.post_install_message = <<-MESSAGE

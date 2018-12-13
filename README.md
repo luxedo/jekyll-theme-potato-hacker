@@ -1,23 +1,23 @@
-# potato-hacker-jekyll-template
+# jekyll-theme-potato-hacker
 
 Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes` and your sass in `_sass`. To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
 
 ![screenshot](screenshot.png "screenshot")
 
-Check out the [demo](https://armlessjohn404.github.io/potato-hacker-jekyll-template/)
+Check out the [demo](https://luxedo.github.io/jekyll-theme-potato-hacker/)
 
 ## Installation
 
 Add this line to your Jekyll site's Gemfile:
 
 ```ruby
-gem "potato-hacker-jekyll-template"
+gem "jekyll-theme-potato-hacker"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: potato-hacker-jekyll-template
+theme: jekyll-theme-potato-hacker
 ```
 
 And then execute:
@@ -26,11 +26,11 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install potato-hacker-jekyll-template
+    $ gem install jekyll-theme-potato-hacker
 
 ## Usage
 
-This is a simple theme I made to my portfolio/blog https://armlessjohn404.github.io/
+This is a simple theme I made to my portfolio/blog https://luxedo.github.io/
 There are four different categories of pages for this template:
 * Main page `index.md` in the root.
 * Item pages `_items` folder.
@@ -49,7 +49,7 @@ dropdown: dropdown1
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/ArmlessJohn404/potato-hacker-jekyll-template/issues. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/luxedo/jekyll-theme-potato-hacker/issues. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 

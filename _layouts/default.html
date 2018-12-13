@@ -40,7 +40,7 @@
           <div class="pane-separator hidden-xs" style="margin-bottom:30em;"></div>
           <div class="pane-separator visible-xs" style="margin-bottom:5em;"></div>
           <div class="right-pane" style="margin-left: 1em;">
-            {% if page.url contains '/blog/' or page.url == '/' or page.url == '/blog.html' %}
+            {% if page.url == '/' or site.blog == true %}
               <center>
                 {% if site.avatar_image != null %}
                   <img src="{{ site.avatar_image | prepend: '/' | prepend: site.baseurl }}" alt="me" class="avatar-image">

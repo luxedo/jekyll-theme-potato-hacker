@@ -48,7 +48,7 @@
                 <p class="avatar-description">{{site.avatar_description}}</p>
               </center>
             {% endif %}
-            {% if page.url contains "/blog/" %}
+            {% if site.blog == true %}
               <a href="{{ '/blog' | prepend: site.baseurl }}">
                 <h4>Posts:</h4>
               </a>

@@ -5,6 +5,7 @@ Welcome to your new Jekyll theme! In this directory, you'll find the files you n
 ![screenshot](https://raw.githubusercontent.com/luxedo/jekyll-theme-potato-hacker/master/screenshot.png "screenshot")
 
 Check out the [demo](https://luxedo.github.io/jekyll-theme-potato-hacker/)
+Check out the [gem](https://rubygems.org/gems/jekyll-theme-potato-hacker)
 
 ## Installation
 

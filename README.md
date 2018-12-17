@@ -1,4 +1,7 @@
 # jekyll-theme-potato-hacker
+[![Gem Version](https://badge.fury.io/rb/jekyll-theme-potato-hacker.svg)](https://badge.fury.io/rb/jekyll-theme-potato-hacker)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 
 Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes` and your sass in `_sass`. To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
 

@@ -20,27 +20,42 @@ description: A simple Jekyll theme based on potatoes and hackers
 baseurl: "/jekyll-theme-potato-hacker" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+# ------------------------------------------------------------------------------
+# Custom settings
+# ------------------------------------------------------------------------------
+# Useful links
 github_username: "<github_username>"
 facebook_username: "<facebook_username>"
 twitter_username: "<twitter_username>"
 linkedin_id: "<linkedin_id>"
 
-# Theme repository
-theme_repository: "https://github.com/luxedo/jekyll-theme-potato-hacker"
-theme_base: "dark"       # Theme pallente (light | dark)
+# Theme
+# theme: jekyll-theme-potato-hacker                 # Uncomment this
+# remote_theme: luxedo/jekyll-theme-potato-hacker   # Or this
+theme_base: "dark"       # Theme palette (light | dark)
 theme_switch: on         # Show color switch (on | off)
+
+# Extra settings
+blog: on                 # Show blog tag and post list (on | off)
+avatar: on               # Show avatar (on | off)
+avatar_image: "assets/img/avatar.jpg"
+avatar_description: "My name is Popotato and I'm a HACKER."
+highlighter_theme: monokai  # Theme of the syntax_highlighter [base16 |
+                            # colorful | github | gruvbox | molokai |
+                            # monokai | pastie | thankful_eyes | tulip ]
+toolbar_priority:        # Order of the items in the toolbar (except for blog and home)
+  - dropdown2
+  - about
+  - dropdown1
 
 # Collections
 collections:
   dropdown:
     output: true
-  items:
-    output: true
+    items:
+      output: true
+# ------------------------------------------------------------------------------
 
-# Extra settings
-blog: on        # Show blog link (on | off)
-avatar_image: "assets/img/avatar.jpg"
-avatar_description: "My name is Popotato and I'm a HACKER."
 
 # Build settings
 excerpt_separator: "<!--more-->"

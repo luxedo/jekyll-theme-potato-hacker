@@ -19,6 +19,7 @@
               {% if site.blog == true %}
                 <li><a href="{{ '/blog' | prepend: site.baseurl }}">Blog</a></li>
               {% endif %}
+
               {% for page in site.dropdown %}
                 <li class="dropdown dropdown-{{ page.dropdown }}">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"
@@ -26,28 +27,45 @@
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-{{ page.title }}">
-                    <li><a href="{% if page.redirect_to %}{{page.redirect_to}}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}">{{ page.title }}</a></li>
+                    <li priority="{{ page.priority }}"><a href="{% if page.redirect_to %}{{page.redirect_to}}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}">{{ page.title }}</a></li>
                   </ul>
                 </li>
               {% endfor %}
+              {% for page in site.items %}
+                <li class="nav-item"><a href="{% if page.redirect_to %}{{page.redirect_to}}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}">{{ page.title }}</a></li>
+              {% endfor %}
+
               <script>
                 // clean repeated dropdowns and add <li> to their positions
-                $(".dropdown").each((index0, value0) => {
-                  let dropdownClass = "."+$(value0)[0].classList[1];
-                  let dropdownMain = $(dropdownClass)[0].querySelector("ul");
-                  if ($(dropdownClass).length > 1) {
-                    $(dropdownClass).each((index1, value1) => {
-                      if (index1 != 0) {
-                        dropdownMain.append(value1.querySelector("ul li"))
-                        $(dropdownClass)[1].remove();
-                      }
-                    });
-                  }
+                let done = [];
+                let elements = [];
+                $(".dropdown")
+                  //
+                  .each((index0 , value0) => {
+                    let dropdownClass = "."+$(value0)[0].classList[1];
+                    if (done.indexOf(dropdownClass) !== -1) return
+                    done.push(dropdownClass)
+                    let dropdownMain = $(dropdownClass)[0]
+                    let itemsList = $(dropdownClass+">ul>li").sort((a, b) => parseInt(b.getAttribute("priority") || -9999999) - parseInt(a.getAttribute("priority") || -9999999))
+                    $(dropdownClass+">ul>li").remove();
+                    $(dropdownClass+">ul").append(itemsList)
+                    $(dropdownClass).remove();
+                    elements.push(dropdownMain)
                 });
+                let priority = [{% for item in site.toolbar_priority %} "{{item}}", {% endfor %}];
+                elements = elements.concat(...$(".nav-item").remove())
+                priority.map(text => {
+                  elements = elements.filter(node => {
+                      let nodeText = node.querySelector("a").textContent.trim()
+                      if (text == nodeText) {
+                          $(".nav").append(node)
+                          return false;
+                      }
+                      return true;
+                  })
+                });
+                $(".nav").append(elements)
               </script>
-              {% for page in site.items %}
-                <li><a href="{% if page.redirect_to %}{{page.redirect_to}}{% else %}{{ page.url | prepend: site.baseurl }}{% endif %}">{{ page.title }}</a></li>
-              {% endfor %}
             </ul>
           </div>
         </div>

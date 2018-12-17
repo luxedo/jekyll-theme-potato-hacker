@@ -44,18 +44,22 @@
           <div class="pane-separator hidden-xs" style="margin-bottom:30em;"></div>
           <div class="pane-separator visible-xs" style="margin-bottom:5em;"></div>
           <div class="right-pane" style="margin-left: 1em;">
-            {% if site.blog == true %}
-              {% if site.avatar_image != null %}
-                <div class="avatar">
-                  <center>
+            {% if site.avatar == true %}
+              <div class="avatar">
+                <center>
+                  {% if site.avatar_image != null %}
                     <img src="{{ site.avatar_image | prepend: '/' | prepend: site.baseurl }}" alt="me" class="avatar-image">
+                  {% endif %}
+                  {% if site.avatar_description != null %}
                     <p class="avatar-description">{{site.avatar_description}}</p>
-                    <div class="right-links">
-                      {% include links.html %}
-                    </div>
-                  </center>
-                </div>
-              {% endif %}
+                  {% endif %}
+                  <div class="right-links">
+                    {% include links.html %}
+                  </div>
+                </center>
+              </div>
+            {% endif %}
+            {% if site.blog == true %}
               <div class="posts-list">
                 <a href="{{ '/blog' | prepend: site.baseurl }}">
                   <h4>Posts:</h4>

@@ -32,6 +32,7 @@ linkedin_id: "<linkedin_id>"
 # Theme
 # theme: jekyll-theme-potato-hacker                 # Uncomment this
 # remote_theme: luxedo/jekyll-theme-potato-hacker   # Or this
+theme_repository: "https://github.com/luxedo/jekyll-theme-potato-hacker"
 theme_base: "dark"       # Theme palette (light | dark)
 theme_switch: on         # Show color switch (on | off)
 
@@ -40,20 +41,20 @@ blog: on                 # Show blog tag and post list (on | off)
 avatar: on               # Show avatar (on | off)
 avatar_image: "assets/img/avatar.jpg"
 avatar_description: "My name is Popotato and I'm a HACKER."
-highlighter_theme: monokai  # Theme of the syntax_highlighter [base16 |
+highlighter_theme: gruvbox  # Theme of the syntax_highlighter [base16 |
                             # colorful | github | gruvbox | molokai |
                             # monokai | pastie | thankful_eyes | tulip ]
 toolbar_priority:        # Order of the items in the toolbar (except for blog and home)
   - dropdown2
-  - about
+  - About
   - dropdown1
 
 # Collections
 collections:
   dropdown:
     output: true
-    items:
-      output: true
+  items:
+    output: true
 # ------------------------------------------------------------------------------
 
 

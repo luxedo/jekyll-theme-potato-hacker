@@ -62,10 +62,11 @@
             {% if site.blog == true %}
               <div class="posts-list">
                 <a href="{{ '/blog' | prepend: site.baseurl }}">
-                  <h4>Posts:</h4>
+                  <h4>Recent Posts:</h4>
                 </a>
                 <ul>
-                  {% for post in site.posts %}
+                  {% for i in (1..site.recent_posts) %}
+                     {% assign post = site.posts[i] %}
                   <li>
                     <a href="{{ post.url | prepend: site.baseurl  }}">{{ post.title }}</a>
                   </li>

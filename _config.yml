@@ -18,7 +18,7 @@ author: "<your_name>"
 email: "<your@mail>"
 description: A simple Jekyll theme based on potatoes and hackers
 baseurl: "/jekyll-theme-potato-hacker" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://schs-robotics.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # ------------------------------------------------------------------------------
 # Custom settings

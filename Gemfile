@@ -1,7 +1,8 @@
-gem "bundler", "2.3.24"
-gem "kramdown-parser-gfm"
+gem 'bundler', '2.5.4'
+gem 'kramdown-parser-gfm'
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 gemspec
 
-gem "webrick", "~> 1.7"
+gem 'json', '~> 2.7'
+gem 'webrick', '~> 1.8'

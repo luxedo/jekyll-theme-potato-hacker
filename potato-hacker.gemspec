@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = 'jekyll-theme-potato-hacker'
-  spec.version       = '1.0.4'
+  spec.version       = '1.0.5'
   spec.authors       = ['Luiz Eduardo Amaral']
   spec.email         = ['luizamaral306@gmail.com']
 

@@ -25,24 +25,21 @@
     </section>
     <section class="content">
       <div class="row">
-        <!-- <div class="col-sm-2">
-          <div class="pane-separator hidden-xs" style="margin-bottom:30em;"></div>
-          <div class="left-pane">
-          </div>
-        </div> -->
         <div class="col-md-8 col-md-offset-1 content-div">
-          <div class="page-separator hidden-md">
+          <div class="page-separator visible-md visible-lg visible-xl">
             <h1 class="h1-strip" style="padding-bottom:8em; margin-bottom: 0;"></h1>
           </div>
-          <div class="page-separator visible-md">
-            <h1 class="h1-strip" style="padding-bottom:2em; margin-bottom: 0;"></h1>
+          <div class="page-separator visible-sm">
+            <h1 class="h1-strip" style="padding-bottom:3em; margin-bottom: 0;"></h1>
+          </div>
+          <div class="page-separator visible-xs">
+            <h1 class="h1-strip" style="padding-bottom:1em; margin-bottom: 0;"></h1>
           </div>
           <h1 class="post-title page-title" id="title"><a href="#title">{{ page.title }}</a></h1>
           {{ content }}
         </div>
         <div class="col-md-2">
-          <div class="pane-separator hidden-md" style="margin-bottom:30em;"></div>
-          <div class="pane-separator visible-md" style="margin-bottom:5em;"></div>
+          <div class="pane-separator visible-md visible-lg visible-xl" style="margin-bottom:30em;"></div>
           <div class="right-pane">
             {% if site.avatar == true %}
             <div class="avatar">
